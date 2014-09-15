@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script src="jquery.form.js"></script>
+</head>
+<body>
+
+<form action="6.php" method="post" id="x6r">
+Date and time: <input type="datetime-local" name="user_time" />
+<input type="submit" />
+</form>
+<div id="result" style="margin:2em;"></div>
+<script>
+jQuery('#x6r').ajaxForm({
+    data: {        
+    },
+    beforeSubmit: function(formData, jqForm, options) {
+    },
+    success : function(responseText, statusText, xhr, $form) {
+        jQuery("#result").text(responseText);
+    }
+});
+</script>
+</body>
+</html>
