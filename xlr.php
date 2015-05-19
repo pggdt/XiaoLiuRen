@@ -9,7 +9,7 @@ function multiexplode ($delimiters,$string) {
     $launch = explode($delimiters[0], $ready);
     return  $launch;
 }
-$timeArray=multiexplode(array("-","T",":"),$user_time);
+$timeArray=multiexplode(array("-","T",":","+"," "),$user_time);
 
 $lunar=new Lunar();
 $lunarDate=$lunar->convertSolarToLunar($timeArray[0],$timeArray[1],$timeArray[2]);
